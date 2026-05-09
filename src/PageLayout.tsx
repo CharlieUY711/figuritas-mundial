@@ -1,15 +1,13 @@
 import React from "react";
 
-export default function PageLayout({ userName, groups }) {
+export default function PageLayout({ userName, children }) {
   return (
     <div style={styles.app}>
       <header style={styles.header}>
         <h1 style={styles.title}>{userName}</h1>
       </header>
 
-      <main style={styles.main}>
-        <p style={{ color: "white" }}>Contenido del álbum va acá…</p>
-      </main>
+      <main style={styles.main}>{children}</main>
     </div>
   );
 }
